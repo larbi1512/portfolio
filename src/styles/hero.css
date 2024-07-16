@@ -1,0 +1,34 @@
+@keyframes rotate-ellipse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-rotate-ellipse {
+    animation: rotate-ellipse 5s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-list-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.scrolling-list {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}

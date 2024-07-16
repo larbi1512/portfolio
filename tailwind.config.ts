@@ -27,7 +27,7 @@ const config: Config = {
 
       },
       fontFamily: {
-        fira: ["Fira Code", "sans-serif"],
+        fira: ['Fira Code', "monospace"],
         opensans: ["Open Sans", "sans-serif"]
       },
 
