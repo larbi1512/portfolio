@@ -11,9 +11,11 @@
     animation: rotate-ellipse 5s linear infinite;
 }
 
+
+
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 
     100% {
@@ -21,14 +23,8 @@
     }
 }
 
-.scrolling-list-wrapper {
-    overflow: hidden;
-    white-space: nowrap;
+.animate-scroll {
     display: flex;
-    align-items: center;
-}
-
-.scrolling-list {
-    display: inline-block;
     animation: scroll 20s linear infinite;
+    white-space: nowrap;
 }
