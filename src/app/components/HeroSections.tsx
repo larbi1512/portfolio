@@ -11,10 +11,10 @@ import '@/styles/hero.css'
 
 const HeroSections = () => {
   return (
-    <section className="px-[20px] lg:px-[50px] max-w-screen pb-20 pt-36 bg-main flex flex-col-reverse gap-[400px] md:gap-0 md:flex-row relative justify-between md:justify-center items-center md:items-start " >
+    <section className="px-[20px] lg:px-[50px] w-full pb-20 pt-36 bg-main flex flex-col-reverse gap-[400px] md:gap-0 md:flex-row relative justify-between md:justify-center items-center md:items-start " >
       
           <Spotlight className="-top-[3%] left-[30%] h-screen" fill="white" />
-        <div className=" flex-col gap-8 lg:w-[70%] justify-center">
+        <div className=" flex-col gap-8 w-full lg:w-[70%] justify-center ">
         <h1 className="text-white-50 text-[24px] md:text-[36px] font-fira text-center md:text-left">Hello, I'M</h1>
         <p className="font-fira text-[32px] md:text-[64px] text-main_purple text-center md:text-left">Larbi SAIDCHIKH</p>
         <p className='mb-4 font-fira text-[24px] md:text-[36px] text-white-50 text-center md:text-left'> I am a <span className="text-main_purple">front-end developer</span>, <span className="text-main_purple">data scientist </span>
