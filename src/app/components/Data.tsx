@@ -3,6 +3,7 @@ import img1 from '@/../public/images/aifest.png'
 import img2 from '@/../public/images/gifty.png'
 import img3 from '@/../public/images/ML_project.png'
 import img4 from '@/../public/images/Gostu.png'
+
 const projects = [
     {
         image: img1,
@@ -30,4 +31,90 @@ const projects = [
     }
 ];
 
-export default projects;
+
+
+const skills = [
+    'scikit learn',
+    'tensorflow',
+    'keras',
+    'pandas',
+    'numpy',
+    'matplotlib',
+    'seaborn',
+    'javascript',
+    'typescript',
+    'react',
+    'next.js',
+    'flutter',
+    'dart',
+    'python',
+    'java',
+    'c++',
+    'c',
+    'html',
+    'css',
+    'sass',
+    'tailwindcss',
+    'bootstrap',
+    'git',
+    'github',
+    'docker',
+    'figma',
+    'adobe illustrator',
+    'adobe photoshop',
+    'R',
+    'SQL',
+    'NoSQL',
+    'firebase',
+    'mongodb',
+    'postgresql',
+    'mysql',
+    'linux',
+    'bash',
+    'Django',
+    'flask',
+    'fastapi',
+    'UI design',
+    'UX design',
+    'UX research',
+    'wireframing',
+    'prototyping',
+    'graphic design',
+    'data mining',
+    'machine learning',
+    'deep learning',
+];
+
+const experience = [
+    {
+        position: 'Front-end developer',
+        company: 'Gostu dz',
+        date: 'July 2023 - Present',
+    },
+    {
+        position: 'Full-Stack intern',
+        company: 'FikraTek solutions',
+        date: 'July 2024 - Present',
+    },
+    {
+        position: 'Mobile UI/UX designer',
+        company: 'Gostu dz',
+        date: 'July 2023 - December 2023',
+    },
+    {
+        position: 'Machine Learning intern',
+        company: 'Cellula technologies',
+        date: 'february 2024 - March 2023',
+    },
+    {
+        position: 'Design Team Leader',
+        company: 'GDSC ENSIA',
+        date: 'October 2022 - June 2023',
+    },
+    {
+        position: 'Marketing Team Leader',
+        company: 'GDSC ENSIA',
+        date: 'October 2023- July 2024',
+    }
+];
+export  {projects, skills, experience};
