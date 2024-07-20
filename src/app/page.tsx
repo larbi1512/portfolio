@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 export default function Home() {
   return (
-    <main className="  max-h-screen flex-col bg-main ">
+    <main className="  max-h-screen flex-col bg-main overflow-x-hidden">
       <HeroSections/>
       <SkillHero/>
       <About/>
