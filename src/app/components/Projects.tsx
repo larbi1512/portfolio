@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Projects = () => {
   return (
       <div className='flex  flex-col bg-main justify-center items-center md:items-start px-[20px] md:px-[100px] gap-4'>
-          <h1 className="text-main_purple_light text-center font-fira md:text-left pt-[30px] px-[50px] text-[32px]">Projects</h1>
+          <h1 className="text-main_purple_light text-center font-fira md:text-left pt-[30px] px-[50px] text-[24px] md:text-[32px]">Projects</h1>
       <div className="flex flex-wrap gap-8 bg-main justify-evenly ">
 
           {projects.map((project, index) => (
