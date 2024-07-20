@@ -3,6 +3,12 @@ import img1 from '@/../public/images/aifest.png'
 import img2 from '@/../public/images/gifty.png'
 import img3 from '@/../public/images/ML_project.png'
 import img4 from '@/../public/images/Gostu.png'
+import github from '@/../public/icons/github.svg'
+import linkedin from '@/../public/icons/linkedin.svg'
+import twitter from '@/../public/icons/twitter.svg'
+import mail from '@/../public/icons/basil_gmail-solid.svg'
+import instagram from '@/../public/icons/streamline_instagram-solid.svg'
+import behance from '@/../public/icons/wpf_behance.svg'
 
 const projects = [
     {
@@ -117,4 +123,32 @@ const experience = [
         date: 'October 2023- July 2024',
     }
 ];
-export  {projects, skills, experience};
+
+const contacts =[
+ {
+        link: 'https://github.com/larbi1512',
+    icon: github,
+ },
+    {
+        link: 'https://www.linkedin.com/in/larbi-saidchikh-0621b0224/',
+        icon: linkedin,
+    },
+    {
+        link: 'https://x.com/larbisaidchikh',
+        icon: twitter,
+    },
+    {
+        link: 'https://www.instagram.com/larbisaidchikh/',
+        icon: instagram,
+    },
+    {
+        link: 'https://www.behance.net/larbisck',
+        icon: behance,
+    },
+    {
+        link: 'mailto:larbisck@gmail.com'  ,
+        icon: mail,
+    },
+
+];
+export  {projects, skills, experience, contacts};
