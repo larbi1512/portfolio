@@ -13,7 +13,7 @@ const HeroSections = () => {
       
           <Spotlight className="-top-[3%] left-[30%] h-screen" fill="white" />
         <div className=" flex-col gap-8 w-full lg:w-[70%] justify-center ">
-        <h1 className="text-white-50 text-[24px] md:text-[36px] font-fira text-center md:text-left">Hello, I'M</h1>
+        <h1 className="text-white-50 text-[24px] md:text-[36px] font-fira text-center md:text-left">Hello, I AM</h1>
         <p className="font-fira text-[32px] md:text-[64px] text-main_purple text-center md:text-left">Larbi SAIDCHIKH</p>
         <p className='mb-4 font-fira text-[24px] md:text-[36px] text-white-50 text-center md:text-left'> I am a <span className="text-main_purple">front-end developer</span>, <span className="text-main_purple">data scientist </span>
           and <span className='text-main_purple'>UX/UI designer</span> constantly seeking out innovative solutions to my everyday problems.</p>

@@ -7,7 +7,7 @@ const Contact = () => {
   return (
       <div className={`${styles.background} flex flex-col justify-center items-start text-center md:text-left gap-[70px] md:gap-[150px] pt-[40px]`}>
           <h1 className="font-fira text-white-50 text-[24px] md:text-[36px] px-[20px] md:px-[40px]">Together, we can turn aspirations into achievements.
-              Reach out and let's start.</h1>
+              Reach out and let us start.</h1>
             <div className="flex flex-row gap-4 justify-start px-[20px] ">
                 {contacts.map((contact, index) => (
                     <div key={index} className="flex flex-row gap-12 ">
