@@ -2,9 +2,7 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import Image from 'next/image';
 import persopic from '../../../public/images/persopic.svg'
-import ball from '../../../public/images/ball.svg'
-import ellipse from '../../../public/images/Ellipse.svg'
-import elipse from '../../../public/images/Elipse.svg'
+import elipse from '../../../public/images/elipse.svg'
 import '@/styles/hero.css'
 
 
