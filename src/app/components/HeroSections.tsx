@@ -19,7 +19,7 @@ const HeroSections = () => {
         <p className='mb-4 font-fira text-[20px] md:text-[28px] text-white-50 text-center md:text-left'>
           &lt;h1&gt; I am a <span className="text-main_purple">front-end developer</span>, <span className="text-main_purple">data scientist</span>, and <span className='text-main_purple'>UX/UI designer</span> constantly seeking out innovative solutions to my everyday problems.&lt;h1&gt;
         </p>
-        <Link href='../../../public/Larbi_SAIDCHIKH_CV_.pdf' download>
+        <Link href='/Larbi_SAIDCHIKH_CV_.pdf' download >
           <button className='text-center pt-4 pb-4 px-[20px] md:px-[25px] md:py-[15px] text-white-50 bg-main_purple font-fira hover:bg-main_purple_dark rounded-2xl'>
             Download Resume
           </button>
