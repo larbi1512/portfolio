@@ -30,8 +30,19 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+html {
+  scroll-behavior: smooth;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* styles/globals.css */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 1rem;
   }
 }

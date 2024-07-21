@@ -13,6 +13,7 @@ const config: Config = {
       colors: {
         main: '#120F19',
         main_light: '#352F44',
+        main_dark: '#0A0912',
         white: {
           DEFAULT: "#ffffff",
           50: '#F5F5F5',

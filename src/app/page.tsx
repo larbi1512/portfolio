@@ -5,16 +5,30 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Navbar from "./components/Navbar";
+
 export default function Home() {
+  
   return (
     <main className="  max-h-screen flex-col bg-main overflow-x-hidden">
-      <HeroSections/>
+      <Navbar/>
+      <section id="hero">
+      <HeroSections />
+      </section>
+
       <SkillHero/>
+      <section id="about">
       <About/>
-      <Projects/>
+      </section>
+      <section id="projects"><Projects /></section>
+      <section id="skills">
       <Skills/>
-      <Experience/>
+      </section>
+      <section id="experience">      <Experience />
+</section>
+      <section id="contacts">
       <Contact/>
+      </section>
 
     </main>
   );
