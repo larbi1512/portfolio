@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const HeroSections = () => {
   return (
-    <section className="px-[20px] lg:px-[50px] w-full pb-20 pt-36 bg-main flex flex-col-reverse gap-[300px] md:gap-0 md:flex-row relative justify-between md:justify-center items-center md:items-start " >
+    <section className="px-[20px] lg:px-[50px] w-full mb-10 pt-36 bg-main flex flex-col-reverse gap-[300px] md:gap-0 md:flex-row relative justify-between md:justify-center items-center md:items-start " >
       
           <Spotlight className="-top-[3%] left-[30%] h-screen" fill="white" />
       <div className="flex flex-col gap-4 w-full lg:w-[70%] justify-center items-center md:items-start">
