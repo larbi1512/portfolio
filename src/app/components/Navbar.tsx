@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-1 md:top-[2%] left-[2%] md:left-[20%] right-[2%] md:right-[20%] z-10 flex items-center justify-between px-8 py-3 bg-main_dark md:bg-opacity-60 text-white shadow-md border rounded-2xl border-white-50 border-1 border-opacity-50">
-      <Link href="#hero" className="">
+      <Link href="#hero">
         <div className="text-lg font-normal font-fira cursor-pointer" onClick={() => handleScroll("hero")}>
         Larbi Saidchikh
       </div>
@@ -62,19 +62,18 @@ const Navbar = () => {
             className="absolute top-full left-0 right-0 bg-black bg-opacity-60 text-center font-fira text-white flex flex-col space-y-2 py-2 md:hidden rounded-xl"
           >
             {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={`#${item.id}`}
-                className="px-4 py-2 hover:bg-main_light hover:bg-opacity-60 cursor-pointer "
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScroll(item.id);
-                  setMenuOpen(false);
-                }}
-              >
-                {item.name}
-              </a>
-            ))}
+          <a
+            key={index}
+            href={`#${item.id}`}
+            className="hover:text-gray-300 cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll(item.id);
+            }}
+          >
+            {item.name}
+          </a>
+        ))}
           </motion.div>
         )}
       </AnimatePresence>
