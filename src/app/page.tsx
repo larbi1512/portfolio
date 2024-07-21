@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   
   return (
-    <main className="  max-h-screen flex-col bg-main overflow-x-hidden">
+    <main className="  max-h-screen flex-col bg-main overflow-x-hidden ">
       <Navbar/>
       <section id="hero">
       <HeroSections />
