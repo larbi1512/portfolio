@@ -93,14 +93,19 @@ const skills = [
 
 const experience = [
     {
+        position: 'GeoAI research intern',
+        company: 'Algerian Space Agency',
+        date: 'September 2024 - Present'
+    },
+    {
         position: 'Front-end developer',
         company: 'Gostu dz',
-        date: 'July 2023 - Present',
+        date: 'July 2023 - July 2024',
     },
     {
         position: 'Full-Stack intern',
         company: 'FikraTek solutions',
-        date: 'July 2024 - Present',
+        date: 'July 2024 - September 2024',
     },
     {
         position: 'Mobile UI/UX designer',
@@ -110,18 +115,19 @@ const experience = [
     {
         position: 'Machine Learning intern',
         company: 'Cellula technologies',
-        date: 'february 2024 - March 2023',
+        date: 'february 2024 - March 2024',
+    },
+    {
+        position: 'Marketing Team Leader',
+        company: 'GDSC ENSIA',
+        date: 'October 2023- July 2024',
     },
     {
         position: 'Design Team Leader',
         company: 'GDSC ENSIA',
         date: 'October 2022 - June 2023',
     },
-    {
-        position: 'Marketing Team Leader',
-        company: 'GDSC ENSIA',
-        date: 'October 2023- July 2024',
-    }
+    
 ];
 
 const contacts =[
