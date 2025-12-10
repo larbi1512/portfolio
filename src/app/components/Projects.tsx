@@ -1,5 +1,5 @@
 import React from 'react'
-import { projects, skills } from './Data';
+import { projects } from './Data';
 import ProjectCard from './ProjectCard';
 import GithubIcon from '../../../public/icons/github.svg'
 import Image from 'next/image'
