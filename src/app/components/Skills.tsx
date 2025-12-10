@@ -1,18 +1,29 @@
 import React from 'react'
-import { skills } from './Data';
+import { skillsCategories } from './Data';
 
 const Skills = () => {
   return (
-    <div className="flex  items-center bg-main px-[20px] md:px-[75px] py-[20px] ">
-      <div className=' flex flex-wrap px-[10px] py-[20px] md:py-[50px]  items-center justify-center md:justify-normal gap-10 bg-main_purple_light rounded-3xl'>
-              <h1 className="text-center md:text-left top-1 text-main_purple_dark text-[24pX] md:text-[32px] font-fira px-0 md:px-[40px]">Skills & Languages</h1>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                  {skills.map((skill, index) => (
-                      <div key={index} className="bg-main_purple_darker text-white font-fira text-[12px] md:text-[20px] px-4 py-2 rounded-xl">
-                          {skill}
-                      </div>
-                  ))}
-              </div>
+    <div className="flex flex-col bg-main px-[20px] md:px-[80px] py-[20px]">
+      <h1 className="text-main_purple_light text-center font-fira md:text-left pt-[30px] px-[50px] text-[24px] md:text-[32px] mb-8">Skills & Languages</h1>
+
+      <div className="flex flex-col gap-8">
+        {Object.entries(skillsCategories).map(([category, skills], index) => (
+          <div key={index} className="flex flex-col gap-4">
+            <h2 className="text-white-50 font-fira text-[18px] md:text-[24px] font-semibold border-b-2 border-main_purple pb-2">
+              {category}
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill, skillIndex) => (
+                <span
+                  key={skillIndex}
+                  className="text-white-50 font-fira text-[12px] md:text-[16px] px-4 py-2 border border-white-50 rounded-lg hover:border-main_purple hover:text-main_purple transition-colors"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
