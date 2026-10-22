@@ -2,47 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-@import url('https: //fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: light;
+  --paper: #ffffff;
+  --subtle: #f4f4f5;
+  --ink: #18181b;
+  --muted: #52525b;
+  --faint: #71717a;
+  --hairline: #e4e4e7;
+  --rule: #d4d4d8;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0c0c0d;
+    --subtle: #18181b;
+    --ink: #f4f4f5;
+    --muted: #a1a1aa;
+    --faint: #8b8b94;
+    --hairline: #232326;
+    --rule: #3f3f46;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0c0c0d;
+  --subtle: #18181b;
+  --ink: #f4f4f5;
+  --muted: #a1a1aa;
+  --faint: #8b8b94;
+  --hairline: #232326;
+  --rule: #3f3f46;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Scrollbar in the site's colors. Chromium and Safari use the ::-webkit-scrollbar
+   rules; Firefox only understands the standard properties, which Chromium would
+   otherwise prefer and use to switch the custom styling off. */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) var(--paper);
+  }
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--rule);
+  border: 3px solid var(--paper);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--faint);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@layer components {
+  /* Inline text link: thin underline that darkens on hover */
+  .link {
+    text-decoration-line: underline;
+    text-decoration-color: var(--rule);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  }
+  .link:hover {
+    color: var(--ink);
+    text-decoration-color: var(--ink);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* styles/globals.css */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-  }
+/* Theme toggle shows the icon of the theme it switches to */
+.theme-icon-sun {
+  display: none;
+}
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
+}
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
 }
