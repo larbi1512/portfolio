@@ -1,15 +1,43 @@
 import React from 'react'
+import { about, interests, news, profile } from './Data'
+import Section, { SubHeading } from './ui/Section'
 
 const About = () => {
   return (
-    <div className="w-full  mt-8 px-[20px] md:px-[85px] py-[2%] bg-main">
-      <div className='bg-main_purple_light rounded-3xl  '>
-        <h1 className="text-main_purple_dark text-center md:text-left pt-[30px] px-[50px] text-[24px] md:text-[32px]">About me</h1>
-        <p className="text-main font-fira px-[15px] md:px-[100px] py-[40px] md:py-[100px] text-[16px] md:text-[24px] text-center">Hello! I am Larbi Saidchikh, a final-year student pursuing a Master’s Degree in Artificial Intelligence and Data Science at the National School of Artificial Intelligence. I am passionate about building intelligent systems and solving complex problems through Machine Learning and Full-Stack development. Currently, I am applying my skills as a Master Thesis Intern at EURECOM, focusing on Agentic AI. My background includes research internships at Siine and the Algerian Space Agency, where I worked on deep knowledge tracing and geospatial AI. I am actively seeking 2026 opportunities in Machine Learning Engineering, AI Research, and Full-Stack AI Products.
-        </p>
+    <Section id="about" title="About">
+      <div className="space-y-4 text-[1rem] leading-7">
+        {about.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
+      <ul className="mt-5 flex flex-wrap gap-2" aria-label="Research interests">
+        {interests.map((interest) => (
+          <li key={interest} className="rounded-full border border-hairline px-3 py-0.5 text-[0.8rem] text-muted">
+            {interest}
+          </li>
+        ))}
+      </ul>
+      <a
+        href={profile.cv}
+        download="Larbi_Said_Chikh_CV.pdf"
+        className="mt-6 inline-flex items-center gap-2 rounded-md bg-ink px-3.5 py-2 text-sm font-medium text-paper transition-opacity hover:opacity-85"
+      >
+        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+        </svg>
+        Download CV
+      </a>
 
-    </div>
+      <SubHeading>News</SubHeading>
+      <ul className="space-y-3">
+        {news.map((item, index) => (
+          <li key={index} className="flex gap-4">
+            <span className="w-[4.5rem] shrink-0 pt-px text-sm tabular-nums text-faint">{item.date}</span>
+            <span className="text-[0.95rem]">{item.text}</span>
+          </li>
+        ))}
+      </ul>
+    </Section>
   )
 }
 

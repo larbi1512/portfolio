@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const svgToDataUri = require("mini-svg-data-uri");
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,42 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Neutral palette, defined as CSS variables in globals.css so the
+      // light and dark themes share the same class names.
       colors: {
-        main: '#120F19',
-        main_light: '#352F44',
-        main_dark: '#0A0912',
-        white: {
-          DEFAULT: "#ffffff",
-          50: '#F5F5F5',
-
-        },
-        main_purple: '#A79AFF',
-        main_purple_light: '#CEC7FD',
-        main_purple_dark: '#7A5AF8',
-        main_purple_darker: '#362577',
-
-
-
+        paper: "var(--paper)",
+        subtle: "var(--subtle)",
+        ink: "var(--ink)",
+        muted: "var(--muted)",
+        faint: "var(--faint)",
+        hairline: "var(--hairline)",
+        rule: "var(--rule)",
       },
       fontFamily: {
-        fira: ['Fira Code', "monospace"],
-        opensans: ["Open Sans", "sans-serif"]
-      },
-
-      animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
-      },
-      keyframes: {
-        spotlight: {
-          "0%": {
-            opacity:"0",
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity:"1",
-            transform: "translate(-50%,-40%) scale(1)",
-          },
-        },
+        sans: ["var(--font-sans)", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
       },
     },
   },
