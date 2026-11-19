@@ -45,6 +45,7 @@ export const interests = [
 ];
 
 export const news = [
+    { date: 'Nov 2026', text: 'Our paper on query abstraction in Classical Arabic poetry retrieval was accepted at EACL 2027.' },
     { date: '2026', text: 'Our paper on agentic 5G Core orchestration was accepted at CNSM 2026.' },
     { date: 'Jun 2026', text: 'Defended my MSc thesis on agentic AI for telco cloud orchestration (ENSIA × EURECOM).' },
     { date: 'Apr 2026', text: 'Joined PrevAI Health as an AI engineer (part-time).' },
@@ -62,6 +63,17 @@ export interface Publication {
 }
 
 export const publications: Publication[] = [
+    {
+        title: 'What the Query Remembers: Query Abstraction Governs Lexical and Dense Retrieval of Classical Arabic Poetry',
+        authors: 'O. F. Zouak, S. Mani, L. Said Chikh, R. A. Ouahioune',
+        venue: 'EACL 2027',
+        note: 'Accepted',
+        summary: 'Benchmarks nine dense encoders and BM25 on two Classical Arabic poetry corpora and shows that how much of the poem a query remembers decides which retriever wins: BM25 leads on tip-of-the-tongue queries but drops to eighth of ten on abstract ones.',
+        links: [
+            { label: 'arXiv', href: 'https://arxiv.org/abs/2610.31821v1' },
+            { label: 'Code', href: 'https://github.com/Ellzo/what-the-query-remembers' },
+        ],
+    },
     {
         title: 'An Agentic AI Framework for Cloud-Native 5G Core Orchestration',
         authors: 'L. Said Chikh, A. Mekrache, A. Cheriet, A. Ksentini',
@@ -108,8 +120,10 @@ export const experience: Experience[] = [
         org: 'PrevAI Health',
         date: 'Apr 2026 – present',
         points: [
-            'Refactored the scaffolding of a production LLM data-science agent, then ablated prompt-engineering and prompt-compression variants to cut its context while preserving output quality.',
-            'Built a reproducible analysis pipeline (custom parser, fully executed notebooks) over the PH-LLM fitness case-study data.',
+            'Saelia, a multi-agent health assistant (LangGraph on AWS Bedrock): rebuilt the data-science and fitness-coach agents around schema-first and deterministic analytics tools, grounding answers in wearable data. ',
+            'Built the evaluation stack: ablation and QA harnesses with deterministic graders, an LLM judge and paired statistics (Wilson CIs, McNemar, Holm-Bonferroni), plus external validation against Google\'s PH-LLM case studies (~99.5% numeric fidelity).',
+            'Profiled latency and certified output-brevity changes before shipping: -36% output tokens and -21% end-to-end latency with no measurable quality loss.',
+            'Care Network: a serverless backend for sharing patient data with family and care teams (Lambda, API Gateway, Cognito, DynamoDB, SES), with audited role-based access.',
         ],
     },
     {
@@ -222,7 +236,7 @@ export const otherProjects: Project[] = [
 export const competencies: { title: string; items: string[] }[] = [
     {
         title: 'Agentic AI & Multi-Agent Systems',
-        items: ['LangGraph', 'multi-agent orchestration', 'intent-driven automation', 'tool & function calling', 'human-in-the-loop checkpoints', 'shared agent state & memory'],
+        items: ['LangGraph', 'LangChain', 'multi-agent orchestration', 'intent-driven automation', 'tool & function calling', 'human-in-the-loop checkpoints', 'shared agent state & memory', 'context engineering'],
     },
     {
         title: 'LLMs, NLP & Retrieval',
@@ -237,8 +251,12 @@ export const competencies: { title: string; items: string[] }[] = [
         items: ['5G Core (OpenAirInterface)', 'Kubernetes', 'Helm', 'Docker', 'Prometheus', 'Grafana', 'KPI monitoring, anomaly & SLA detection', 'wireless intrusion detection', 'microservices & API gateways (Spring Boot)', 'Linux', 'GCP'],
     },
     {
+        title: 'AWS & Serverless',
+        items: ['Amazon Bedrock (Nova, Kimi)', 'AWS Lambda (Powertools)', 'API Gateway (HTTP API)', 'Cognito (JWT auth)', 'DynamoDB (single-table design, transactions, GSIs)', 'SES', 'IAM (least privilege)', 'CloudWatch Logs', 'boto3 & AWS CLI', 'moto & DynamoDB Local testing'],
+    },
+    {
         title: 'Machine Learning, Data & Developer Stack',
-        items: ['Python (primary)', 'C/C++', 'Java', 'SQL', 'JavaScript', 'PyTorch', 'Hugging Face Transformers', 'TensorFlow', 'Scikit-learn', 'knowledge tracing & recommender systems', 'time-series analysis', 'satellite imagery & remote sensing', 'Spark', 'Hadoop', 'Hive', 'pytest', 'Git', 'Flask', 'Django', 'React', 'Next.js', 'Flutter'],
+        items: ['Python (primary)', 'C/C++', 'Java', 'SQL', 'JavaScript', 'PyTorch', 'Hugging Face Transformers', 'TensorFlow', 'Scikit-learn', 'pandas', 'pydantic', 'knowledge tracing & recommender systems', 'time-series analysis', 'satellite imagery & remote sensing', 'Spark', 'Hadoop', 'Hive', 'pytest', 'Git', 'Flask', 'Django', 'React', 'Next.js', 'Flutter'],
     },
 ];
 
